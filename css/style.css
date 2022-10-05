@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+}
+
+.container {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1/9;
+}
+
+.logo {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1/9;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  width: 100%;
+  padding: 30px;
+}
+
+@media (min-width: 750px) {
+  .logo {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-column: 2/5;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+}
+
+.hero {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1/9;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  width: 100%;
+  background-image: url("/images/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  height: 250px;
+}
+
+@media (min-width: 750px) {
+  .hero {
+    background-image: url("/images/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 3;
+    grid-column: 6/9;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+}
+
+.description-form {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-column: 1/9;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  min-width: 375px;
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 750px) {
+  .description-form {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 3;
+    grid-column: 2/5;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    text-align: left;
+  }
+}
+
+.description-form > h1 {
+  color: #413a3a;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+@media (min-width: 750px) {
+  .description-form > h1 {
+    font-size: 70px;
+    text-align: left;
+  }
+}
+
+.description-form > h1 > span {
+  color: #ce9797;
+  font-weight: 300;
+}
+
+.description-form > p {
+  color: #ce9797;
+  font-family: "Josefin Sans", sans-serif;
+  text-align: center;
+  line-height: 1.6;
+  padding: 20px 10px;
+}
+
+@media (min-width: 750px) {
+  .description-form > p {
+    text-align: left;
+  }
+}
+
+.email-form {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 30px;
+  border: 1px solid #ce9797;
+  max-width: 400px;
+}
+
+.email-form-error {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 30px;
+  border: 1px solid red;
+  max-width: 400px;
+}
+
+.email-form > input {
+  border-radius: 30px;
+  padding: 20px;
+  height: 45px;
+  border: none;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  outline-style: none;
+}
+
+.email-form > input::-webkit-input-placeholder {
+  color: #ce9797;
+}
+
+.email-form > input:-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.email-form > input::-ms-input-placeholder {
+  color: #ce9797;
+}
+
+.email-form > input::placeholder {
+  color: #ce9797;
+}
+
+.email-form > button {
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  width: 20%;
+  border-radius: 30px;
+  border: none;
+  -webkit-box-shadow: 0 10px 20px 5px #f8bfbf;
+          box-shadow: 0 10px 20px 5px #f8bfbf;
+  cursor: pointer;
+}
+
+.email-form > button:active {
+  background: #f8bfbf;
+}
+
+.error-message {
+  font-family: "Josefin Sans", sans-serif;
+  color: #f96262;
+  font-weight: 300;
+}
+
+.error-icon {
+  height: 45px;
+}
